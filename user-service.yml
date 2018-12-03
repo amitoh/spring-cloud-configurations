@@ -7,6 +7,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:2000/eureka
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instanceId:${random.value}}
 hystrix:
   command:
     default:
