@@ -9,6 +9,7 @@ eureka:
       defaultZone: http://localhost:2000/eureka
   instance:
     instanceId: ${spring.application.name}:${spring.application.instanceId:${random.value}}
+    prefer-ip-address: true
 hystrix:
   command:
     default:
